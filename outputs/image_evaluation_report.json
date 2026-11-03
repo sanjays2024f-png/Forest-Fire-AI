@@ -1,0 +1,88 @@
+{
+  "status": "evaluated",
+  "sample_count": 428,
+  "accuracy": 0.6636,
+  "precision": 0.665,
+  "recall": 0.6636,
+  "f1_score": 0.662,
+  "confusion_matrix": [
+    [
+      98,
+      18,
+      14
+    ],
+    [
+      18,
+      79,
+      52
+    ],
+    [
+      9,
+      33,
+      107
+    ]
+  ],
+  "roc_auc": null,
+  "train_split": {
+    "train": 2063,
+    "val": 440,
+    "test": 428
+  },
+  "train_metrics": {
+    "accuracy": 0.7126,
+    "precision": 0.7214,
+    "recall": 0.7126,
+    "macro_f1": 0.7151,
+    "confusion_matrix": [
+      [
+        509,
+        69,
+        91
+      ],
+      [
+        29,
+        535,
+        131
+      ],
+      [
+        50,
+        223,
+        426
+      ]
+    ],
+    "confusion_labels": [
+      "fire",
+      "smoke",
+      "no_fire"
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.6159,
+    "precision": 0.6257,
+    "recall": 0.6159,
+    "macro_f1": 0.6196,
+    "confusion_matrix": [
+      [
+        96,
+        16,
+        29
+      ],
+      [
+        12,
+        101,
+        36
+      ],
+      [
+        13,
+        63,
+        74
+      ]
+    ],
+    "confusion_labels": [
+      "fire",
+      "smoke",
+      "no_fire"
+    ]
+  },
+  "dataset_source": "DeepQuestAI v1 https://github.com/DeepQuestAI/Fire-Smoke-Dataset/releases/tag/v1"
+}

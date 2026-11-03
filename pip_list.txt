@@ -1,0 +1,16 @@
+﻿Package    Version
+---------- -------
+pip        22.0.4
+setuptools 58.1.0
+.\.venv\Scripts\python.exe : WARNING: You are using pip version 22.0.4; however, version 26.0.1 is 
+available.
+At line:1 char:41
++ ... forest_fire_ai' ; .\.venv\Scripts\python.exe -m pip list 2>&1 | Out-F ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: You ar...1 is available.:String) [], RemoteEx 
+   ception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+You should consider upgrading via the 'C:\Users\Sanjay S\forest_fire_ai\.venv\Scripts\python.exe -m 
+pip install --upgrade pip' command.
+Python 3.9.13

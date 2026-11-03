@@ -1,0 +1,26 @@
+PASS: fire image -> FIRE (or UNCERTAIN) | image_100.jpg => FIRE conf=0.8393
+PASS: fire model trained | trained
+PASS: fire growth INSUFFICIENT_TEMPORAL_DATA | INSUFFICIENT_TEMPORAL_DATA
+PASS: fire severity level+score | {'level': 'HIGH', 'score': 0.6769, 'method': 'Transparent operational rule on trained-classifier evidence only. score = 0.40*confidence + 0.40*event_likelihood*(1.0 fire | 0.75 smoke) + 0.20*min(1, fire_area_pct/25). Lev
+PASS: fire risk score 0-1 | {'score': 0.853, 'level': 'HIGH', 'method': 'Operational event-likelihood estimate: risk = 1 - P(no_fire). Levels HIGH>=0.65 MEDIUM>=0.40 else LOW. Disclosed operational buckets, not a calibrated model.'}
+PASS: smoke image -> SMOKE (or UNCERTAIN) | image_100.jpg => SMOKE conf=0.8052
+PASS: smoke model trained | trained
+PASS: smoke growth INSUFFICIENT_TEMPORAL_DATA | INSUFFICIENT_TEMPORAL_DATA
+PASS: smoke severity level+score | {'level': 'HIGH', 'score': 0.6055, 'method': 'Transparent operational rule on trained-classifier evidence only. score = 0.40*confidence + 0.40*event_likelihood*(1.0 fire | 0.75 smoke) + 0.20*min(1, fire_area_pct/25). Lev
+PASS: smoke risk score 0-1 | {'score': 0.9446, 'level': 'HIGH', 'method': 'Operational event-likelihood estimate: risk = 1 - P(no_fire). Levels HIGH>=0.65 MEDIUM>=0.40 else LOW. Disclosed operational buckets, not a calibrated model.'}
+PASS: no_fire image -> NO_FIRE (or UNCERTAIN) | image_101.jpg => NO_FIRE conf=0.4672
+PASS: no_fire model trained | trained
+PASS: no_fire growth INSUFFICIENT_TEMPORAL_DATA | INSUFFICIENT_TEMPORAL_DATA
+PASS: no_fire severity level+score | {'level': 'LOW', 'score': 0.0, 'method': 'Transparent operational rule on trained-classifier evidence only. score = 0.40*confidence + 0.40*event_likelihood*(1.0 fire | 0.75 smoke) + 0.20*min(1, fire_area_pct/25). Levels 
+PASS: no_fire risk score 0-1 | {'score': 0.5328, 'level': 'MEDIUM', 'method': 'Operational event-likelihood estimate: risk = 1 - P(no_fire). Levels HIGH>=0.65 MEDIUM>=0.40 else LOW. Disclosed operational buckets, not a calibrated model.'}
+PASS: invalid ext rejected (400) | {"detail":"Only JPG, JPEG, PNG, and WEBP images are supported."}
+PASS: sequence [] -> 501 TEMPORAL MODEL NOT TRAINED | {"detail":"Temporal prediction is unavailable: no validated sequence model is loaded."}
+PASS: health ok | {'yolo': 'fallback (checkpoint unavailable)', 'efficientnet': 'unavailable (weights not loaded)', 'temporal': 'LSTM unavailable - INSUFFICIENT_DATA', 
+PASS: model-info trained | trained
+PASS: history has entries | len=5
+PASS: history/{id} ok | 78
+PASS: history DELETE ok | {"status":"deleted","id":77}
+PASS: no location -> null | Location unavailable
+PASS: area honest | None
+PASS: UNCERTAIN path exists | threshold=0.45 configurable via UNCERTAIN_THRESHOLD
+TOTAL 25 checks, 0 failed: []

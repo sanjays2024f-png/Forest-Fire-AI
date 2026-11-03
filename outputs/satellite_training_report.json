@@ -1,0 +1,228 @@
+{
+  "source": "NASA FIRMS MODIS 2024 country CSVs (real, sampled)",
+  "csv_files_used": 206,
+  "dataset_summary": {
+    "dataset_rows": 77635,
+    "feature_count": 16,
+    "target": "confidence_level",
+    "columns": [
+      "latitude",
+      "longitude",
+      "brightness",
+      "scan",
+      "track",
+      "acq_date",
+      "acq_time",
+      "satellite",
+      "instrument",
+      "confidence",
+      "version",
+      "bright_t31",
+      "frp",
+      "daynight",
+      "type",
+      "source_file",
+      "confidence_level"
+    ],
+    "dtypes": {
+      "latitude": "float64",
+      "longitude": "float64",
+      "brightness": "float64",
+      "scan": "float64",
+      "track": "float64",
+      "acq_date": "object",
+      "acq_time": "int64",
+      "satellite": "object",
+      "instrument": "object",
+      "confidence": "int64",
+      "version": "float64",
+      "bright_t31": "float64",
+      "frp": "float64",
+      "daynight": "object",
+      "type": "int64",
+      "source_file": "object",
+      "confidence_level": "object"
+    },
+    "missing_values": {
+      "latitude": 0,
+      "longitude": 0,
+      "brightness": 0,
+      "scan": 0,
+      "track": 0,
+      "acq_date": 0,
+      "acq_time": 0,
+      "satellite": 0,
+      "instrument": 0,
+      "confidence": 0,
+      "version": 0,
+      "bright_t31": 0,
+      "frp": 0,
+      "daynight": 0,
+      "type": 0,
+      "source_file": 0,
+      "confidence_level": 0
+    },
+    "duplicate_rows": 0,
+    "class_distribution": {
+      "MEDIUM": 42605,
+      "LOW": 17573,
+      "HIGH": 17457
+    }
+  },
+  "duplicates_removed": 0,
+  "preprocessing": {
+    "numeric": [
+      "latitude",
+      "longitude",
+      "brightness",
+      "scan",
+      "track",
+      "acq_time",
+      "bright_t31",
+      "frp",
+      "type"
+    ],
+    "categorical": [
+      "satellite",
+      "instrument",
+      "daynight"
+    ],
+    "dropped": [
+      "source_file",
+      "version",
+      "confidence"
+    ],
+    "excluded": [
+      "acq_date"
+    ],
+    "target": "confidence_level",
+    "mapping": "confidence>=80 HIGH, 50-80 MEDIUM, else LOW",
+    "smote": "training folds only"
+  },
+  "leakage_checks": {
+    "target_leakage": "FOUND - review",
+    "duplicate_row_count": 0,
+    "duplicate_leakage": "PASS",
+    "suspicious_features": [
+      "acq_date",
+      "acq_time",
+      "confidence",
+      "instrument",
+      "satellite",
+      "source_file",
+      "version"
+    ],
+    "removal_reasons": {
+      "confidence": "Removed 'confidence': direct source of target 'confidence_level' (target leakage).",
+      "source_file": "Removed 'source_file': provenance ID, not fire evidence.",
+      "version": "Removed 'version': provenance ID, not fire evidence.",
+      "instrument": "Identifier 'instrument' must not be predictive; will drop/exclude.",
+      "satellite": "Identifier 'satellite' must not be predictive; will drop/exclude.",
+      "acq_date": "Excluded 'acq_date': high-cardinality/timestamp; leakage/encoding risk.",
+      "acq_time": "Timestamp 'acq_time' risks future-order leakage; excluded."
+    },
+    "train_test_duplicate_overlap": 0,
+    "train_test_overlap_check": "PASS"
+  },
+  "split": {
+    "train": "80% CV/training",
+    "test": "20% locked",
+    "stratified": true
+  },
+  "cv_10fold_on_80pct": {
+    "mean_accuracy": 0.784,
+    "std_accuracy": 0.0045,
+    "mean_precision": 0.7805,
+    "std_precision": 0.0049,
+    "mean_recall": 0.784,
+    "std_recall": 0.0045,
+    "mean_f1": 0.7817,
+    "std_f1": 0.0047
+  },
+  "initial_model": {
+    "name": "RandomForest",
+    "train_accuracy": 1.0,
+    "cv_mean_f1": 0.7817
+  },
+  "fit_status": {
+    "model_status": "OVERFITTING",
+    "explanation": "Train 1.0 >> CV 0.784 gap 0.216."
+  },
+  "correction": "Limited complexity: max_depth=12, min_samples_leaf=4, SMOTE training-only.",
+  "final_test": {
+    "scope": "FINAL TEST PERFORMANCE - 20% UNSEEN TEST SET",
+    "accuracy": 0.7538,
+    "precision": 0.7632,
+    "recall": 0.7538,
+    "f1": 0.7555,
+    "macro_f1": 0.7504,
+    "sensitivity_macro": 0.769,
+    "specificity_macro": 0.8666,
+    "fpr_macro": 0.1334,
+    "fnr_macro": 0.231,
+    "per_class": {
+      "HIGH": {
+        "f1": 0.8913,
+        "precision": 0.8459,
+        "recall": 0.9419,
+        "sensitivity": 0.9419,
+        "specificity": 0.9502,
+        "fpr": 0.0498,
+        "fnr": 0.0581,
+        "support": 3491
+      },
+      "LOW": {
+        "f1": 0.5928,
+        "precision": 0.5502,
+        "recall": 0.6427,
+        "sensitivity": 0.6427,
+        "specificity": 0.8462,
+        "fpr": 0.1538,
+        "fnr": 0.3573,
+        "support": 3515
+      },
+      "MEDIUM": {
+        "f1": 0.767,
+        "precision": 0.8172,
+        "recall": 0.7226,
+        "sensitivity": 0.7226,
+        "specificity": 0.8035,
+        "fpr": 0.1965,
+        "fnr": 0.2774,
+        "support": 8521
+      }
+    },
+    "per_class_f1": {
+      "HIGH": 0.8913,
+      "LOW": 0.5928,
+      "MEDIUM": 0.767
+    },
+    "confusion_matrix": [
+      [
+        3288,
+        2,
+        201
+      ],
+      [
+        80,
+        2259,
+        1176
+      ],
+      [
+        519,
+        1845,
+        6157
+      ]
+    ],
+    "confusion_labels": [
+      "HIGH",
+      "LOW",
+      "MEDIUM"
+    ],
+    "test_rows": 15527,
+    "train_rows": 62108
+  },
+  "artifacts": {
+    "model": "C:\\Users\\Sanjay S\\forest_fire_ai\\outputs\\models\\satellite_confidence_model.pkl"
+  }
+}

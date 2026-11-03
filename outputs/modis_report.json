@@ -1,0 +1,13 @@
+{
+  "source": "MODIS 2024 real observations",
+  "csv_file_count": 206,
+  "observation_count": 4848247,
+  "confidence_distribution": {
+    "HIGH": 1426716,
+    "MEDIUM": 2480033,
+    "LOW": 941498
+  },
+  "mean_confidence": 67.0864,
+  "mean_frp": 42.4471,
+  "risk_method": "confidence 70% + normalized FRP 30%"
+}

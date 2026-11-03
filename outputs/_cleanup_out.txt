@@ -1,0 +1,2 @@
+py_compile exit=0 
+keep outputs/_backend_new.log (PermissionError)

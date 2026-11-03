@@ -1,0 +1,24 @@
+PY=3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+ALL_IMAGES total=11
+IMG outputs\predictions\forest-content.png bytes=317 wxh=(160, 100) mode=RGB
+IMG outputs\predictions\forest-fire-ai-validation.png bytes=287 wxh=(100, 100) mode=RGB
+IMG outputs\predictions\normal-image.png bytes=209 wxh=(80, 80) mode=RGB
+IMG outputs\predictions\Screenshot_2026-09-11_225527.png bytes=433442 wxh=(575, 441) mode=RGBA
+IMG outputs\predictions\Screenshot_2026-09-11_230013.png bytes=793435 wxh=(613, 628) mode=RGBA
+IMG outputs\predictions\Screenshot_2026-10-09_010317.png bytes=57730 wxh=(240, 122) mode=RGBA
+IMG outputs\predictions\Screenshot_2026-10-09_095643.png bytes=5306 wxh=(70, 35) mode=RGBA
+IMG outputs\predictions\smoke-content.png bytes=314 wxh=(160, 100) mode=RGB
+IMG outputs\predictions\smoke.jpg bytes=662 wxh=(40, 40) mode=RGB
+IMG outputs\predictions\smoke.png bytes=134 wxh=(40, 40) mode=RGB
+IMG outputs\predictions\smoke.webp bytes=62 wxh=(40, 40) mode=RGB
+MODIS files=206
+CSV modis_2024_Afghanistan.csv fields=['latitude', 'longitude', 'brightness', 'scan', 'track', 'acq_date', 'acq_time', 'satellite', 'instrument', 'confidence', 'version', 'bright_t31', 'frp', 'daynight', 'type']
+  row={'latitude': '35.0125', 'longitude': '70.9894', 'brightness': '315.8', 'scan': '2', 'track': '1.4', 'acq_date': '2024-01-01', 'acq_time': '0823', 'satellite': 'Aqua', 'instrument': 'MODIS', 'confidence': '76', 'version': '61.03', 'bright_t31': '281.1', 'frp': '45.7', 'daynight': 'D', 'type': '0'}
+CSV modis_2024_Albania.csv fields=['latitude', 'longitude', 'brightness', 'scan', 'track', 'acq_date', 'acq_time', 'satellite', 'instrument', 'confidence', 'version', 'bright_t31', 'frp', 'daynight', 'type']
+  row={'latitude': '40.8143', 'longitude': '19.6998', 'brightness': '300.5', 'scan': '1.1', 'track': '1.1', 'acq_date': '2024-01-28', 'acq_time': '0853', 'satellite': 'Terra', 'instrument': 'MODIS', 'confidence': '37', 'version': '61.03', 'bright_t31': '280.8', 'frp': '7.9', 'daynight': 'D', 'type': '0'}
+DB exists=True size=49152
+DB detections count=54
+DB alerts count=10
+DB model_predictions count=0
+NET https://raw.githubusercontent.com OK 200
+NET https://huggingface.co OK 200

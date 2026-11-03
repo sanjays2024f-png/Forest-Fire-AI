@@ -1,0 +1,44 @@
+{
+  "source": "DeepQuestAI v1 https://github.com/DeepQuestAI/Fire-Smoke-Dataset/releases/tag/v1",
+  "upstream_counts": {
+    "fire": 1000,
+    "no_fire": 1000,
+    "smoke": 1000
+  },
+  "split": "70/15/15 seed=42",
+  "counts": {
+    "train/fire": 700,
+    "train/smoke": 700,
+    "train/no_fire": 700,
+    "val/fire": 150,
+    "val/smoke": 150,
+    "val/no_fire": 150,
+    "test/fire": 150,
+    "test/smoke": 150,
+    "test/no_fire": 150
+  },
+  "total": 3000,
+  "corrupted_count": 0,
+  "corrupted_sample": [],
+  "duplicate_count": 69,
+  "classes": [
+    "fire",
+    "smoke",
+    "no_fire"
+  ],
+  "leakage_fix": {
+    "duplicates_removed": 69,
+    "counts_after": {
+      "train/fire": 669,
+      "train/smoke": 695,
+      "train/no_fire": 699,
+      "val/fire": 141,
+      "val/smoke": 149,
+      "val/no_fire": 150,
+      "test/fire": 130,
+      "test/smoke": 149,
+      "test/no_fire": 149
+    },
+    "total_after": 2931
+  }
+}

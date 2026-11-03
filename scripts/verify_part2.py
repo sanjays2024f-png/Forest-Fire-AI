@@ -1,0 +1,5 @@
+    check('predict nofire: confidence None', ok_conf, 'conf')
+    check('predict nofire: probs None', ok_probs, 'probs')
+    check('predict nofire: detection unavailable', ok_detect, 'detect')
+    check('predict nofire: no alert', r['alert'] is False, r['alert'])
+print('PART2 done')

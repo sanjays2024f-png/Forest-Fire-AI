@@ -1,0 +1,106 @@
+{
+  "device": "cpu",
+  "status": "trained",
+  "training_completed": true,
+  "checkpoint_path": "C:\\Users\\Sanjay S\\forest_fire_ai\\outputs\\models\\best_model.pkl",
+  "class_names": [
+    "fire",
+    "no_fire",
+    "smoke"
+  ],
+  "class_order": [
+    "fire",
+    "smoke",
+    "no_fire"
+  ],
+  "sample_count": 2931,
+  "split": {
+    "train": 2063,
+    "val": 440,
+    "test": 428
+  },
+  "train_metrics": {
+    "accuracy": 0.7126,
+    "precision": 0.7214,
+    "recall": 0.7126,
+    "macro_f1": 0.7151,
+    "confusion_matrix": [
+      [
+        509,
+        69,
+        91
+      ],
+      [
+        29,
+        535,
+        131
+      ],
+      [
+        50,
+        223,
+        426
+      ]
+    ],
+    "confusion_labels": [
+      "fire",
+      "smoke",
+      "no_fire"
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.6159,
+    "precision": 0.6257,
+    "recall": 0.6159,
+    "macro_f1": 0.6196,
+    "confusion_matrix": [
+      [
+        96,
+        16,
+        29
+      ],
+      [
+        12,
+        101,
+        36
+      ],
+      [
+        13,
+        63,
+        74
+      ]
+    ],
+    "confusion_labels": [
+      "fire",
+      "smoke",
+      "no_fire"
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.6636,
+    "precision": 0.665,
+    "recall": 0.6636,
+    "macro_f1": 0.6665,
+    "confusion_matrix": [
+      [
+        98,
+        14,
+        18
+      ],
+      [
+        9,
+        107,
+        33
+      ],
+      [
+        18,
+        52,
+        79
+      ]
+    ],
+    "confusion_labels": [
+      "fire",
+      "smoke",
+      "no_fire"
+    ]
+  }
+}

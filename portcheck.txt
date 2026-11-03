@@ -1,0 +1,5 @@
+﻿backend:200
+{"status":"ok","app":"AI-Based Real-Time Forest Fire and Smoke Monitoring System","mode":"unavailable (weights not loaded)","primary_model":"EfficientNet-B0 (image) + MODIS CSV classifier (satellite) + LSTM backend-only","model_status":{"yolo":"fallback (checkpoint unavailable)","efficientnet":"unavailable (weights not loaded)","temporal":"LSTM unavailable - INSUFFICIENT_DATA","image_classifier":"not trained","satellite":"MODIS 2024"}}
+frontend:200
+node:v25.9.0
+nodemodules:True

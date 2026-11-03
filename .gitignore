@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+backend/database/*.db
+node_modules/
+frontend/dist/
+outputs/models/*.pt
+outputs/models/*.pth
+outputs/predictions/*
+.DS_Store
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secret files
+.env
+.env.*
+
+# Cache and logs
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# IDE
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+dataset/_upstream/FIRE-SMOKE-DATASET.zip
+outputs/models/satellite_confidence_model.pkl

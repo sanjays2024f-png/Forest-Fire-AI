@@ -1,0 +1,34 @@
+PY=3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+OK fastapi 0.115.0
+OK uvicorn 0.30.6
+OK sklearn 1.3.2
+OK numpy 1.26.4
+OK PIL 10.4.0
+OK joblib 1.4.2
+OK cv2 4.9.0
+OK pandas 2.1.4
+MISS torch ModuleNotFoundError
+MISS torchvision ModuleNotFoundError
+MISS ultralytics ModuleNotFoundError
+dataset/train: total=0 by={} sample=[]
+dataset/val: total=0 by={} sample=[]
+dataset/test: total=0 by={} sample=[]
+dataset/validation: MISSING
+dataset/images: MISSING
+dataset: total=0 by={} sample=[]
+outputs/models: total=0 by={} sample=[]
+outputs/predictions: total=11 by={'(root)': 11} sample=['outputs\\predictions\\forest-content.png', 'outputs\\predictions\\forest-fire-ai-validation.png', 'outputs\\predictions\\normal-image.png', 'outputs\\predictions\\Screenshot_2026-09-11_225527.png', 'outputs\\predictions\\Screenshot_2026-09-11_230013.png', 'outputs\\predictions\\Screenshot_2026-10-09_010317.png', 'outputs\\predictions\\Screenshot_2026-10-09_095643.png', 'outputs\\predictions\\smoke-content.png']
+datasets: total=0 by={} sample=[]
+models_list=[]
+URL http://127.0.0.1:8001/health 200 {"status":"ok","app":"AI-Based Real-Time Forest Fire and Smoke Monitoring System","mode":"unavailable (weights not loaded)","primary_model":"EfficientNet-B0 (image) + MODIS CSV classifier (satellite) + LSTM backend-only","model_status":{"yolo":"fallback (checkpoint unavailable)","efficientnet":"unav
+URL http://127.0.0.1:8000/health FAIL URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+URL http://127.0.0.1:5173 200 <!doctype html>
+<html lang="en">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
